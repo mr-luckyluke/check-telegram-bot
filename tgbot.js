@@ -1,7 +1,7 @@
+require('dotenv').config()
 const { Telegraf } = require('telegraf');
 
-// Replace 'YOUR_BOT_TOKEN' with your actual Telegram bot token
-const bot = new Telegraf("7200242296:AAFLmD5H_OYqwIx8KyoX61yiPXDXbAadPEw");
+const bot = new Telegraf(process.env.API_TELEGRAM_BOT_TOKEN);
 
 bot.start((ctx) => ctx.reply('Hello, World!'));
 
