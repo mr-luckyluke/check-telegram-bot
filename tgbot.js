@@ -15,12 +15,12 @@ const { Telegraf, Markup } = require('telegraf');
 //   console.error('Error launching the bot:', error);
 // });
 
-const bot = new Telegraf(TelegramConfig.API_TELEGRAM_BOT_TOKEN);
+const bot = new Telegraf(process.env.API_TELEGRAM_BOT_TOKEN);
 
 bot.start((ctx) => {
   ctx.reply(
     `Welcome to the MegatonProbot!`,
-    Markup.inlineKeyboard([Markup.button.webApp("Play", AppConfig.bot_url)])
+    Markup.inlineKeyboard([Markup.button.webApp("Play", "https://www.google.com")])
   );
 });
 
